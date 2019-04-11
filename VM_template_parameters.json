@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "vm-template-01303"
+        },
+        "networkSecurityGroupName": {
+            "value": "vm-template-01-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": []
+        },
+        "subnetName": {
+            "value": "sn-msademo-main"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/a4d32dd3-f0ce-45d9-994b-1bad396d7fa7/resourceGroups/rg-msademo-network/providers/Microsoft.Network/virtualNetworks/vnet-msademo-test"
+        },
+        "virtualMachineName": {
+            "value": "vm-template-01"
+        },
+        "virtualMachineRG": {
+            "value": "rg-msademo-infrastructure"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "vm-template-01_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "vm-template-01_DataDisk_0",
+                    "diskSizeGB": 1023,
+                    "sku": "Premium_LRS",
+                    "creationData": {
+                        "createOption": "empty"
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUsername": {
+            "value": "localadmin"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "rgmsademoinfrastructured"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/a4d32dd3-f0ce-45d9-994b-1bad396d7fa7/resourceGroups/rg-msademo-infrastructure/providers/Microsoft.Storage/storageAccounts/rgmsademoinfrastructured"
+        }
+    }
+}
